@@ -1,0 +1,27 @@
+Što su funkcije: 
+Funkcije su „glagoli” u programiranju 
+– blokovi koda koji obavljaju zadatke i 
+izvršavaju se tek kada ih se pozove.
+
+Jednako (=) vs. Trostruko jednako (===):
+Jedan znak (=) služi za dodjeljivanje vrijednosti 
+(npr. postavljanje autora).
+
+Tri znaka (===) služe za provjeru stroge jednakosti 
+(npr. provjerava je li autor doista jednak određenom imenu).
+
+Definiranje i pozivanje funkcija:
+Definira se ključnom riječi function imeFunkcije() { ... }.
+Poziva se navođenjem imena i zagrada (imeFunkcije()).
+
+Argumenti i povratne vrijednosti (return):
+Funkcije mogu primati podatke (argumente/parametre) 
+u zagradama i vraćati rezultat pomoću ključne riječi return.
+
+Ako funkcija zahtijeva argumente, a oni joj se ne proslijede, 
+PHP javlja pogrešku (Too few arguments).
+
+Dinamički parametri (Parametrizacija): Umjesto da vrijednosti
+(poput imena autora) budu fiksno upisane u kod (hard-coded), 
+bolje ih je postaviti kao parametre funkcije kako bi kod bio 
+višekratno iskoristiv i fleksibilniji.

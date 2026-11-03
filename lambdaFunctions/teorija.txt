@@ -1,0 +1,21 @@
+Problem s dupliranjem koda: 
+Stvaranje zasebnih funkcija za svako pojedinačno filtriranje 
+(npr. filterByAuthor, filterByYear) nije praktično ni održivo.
+
+Anonimne (lambda) funkcije: 
+Funkcije koje nemaju ime, a mogu se spremiti u varijable ili 
+proslijediti drugim funkcijama kao argumenti.
+
+Generičko filtriranje (ključ-vrijednost): 
+Prelazak s fiksnih parametara na općenitiju funkciju koja prihvaća
+elemente, ključ i vrijednost (items, key, value), čime se povećava fleksibilnost.
+
+Prosljeđivanje callback funkcije (lambda): 
+Omogućuje potpunu fleksibilnost slanjem prilagođene anonimne funkcije 
+u filter, čime sami definiramo složene uvjete 
+(npr. usporedbe poput „veće od 2000”).
+
+Ugrađena funkcija array_filter: 
+PHP nudi gotovu, ugrađenu funkciju array_filter koja 
+radi na potpuno istom principu (prima niz i funkciju uvjeta) 
+te efikasno mijenja našu ručno pisanu logiku.

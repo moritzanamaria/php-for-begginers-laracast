@@ -1,0 +1,24 @@
+Organizacija koda i razdvajanje slojeva: 
+Trpanje cjelokupne PHP logike i HTML-a u jednu datoteku 
+stvara nepregledan kod („čudovište”), stoga je ključno rano 
+uvesti razdvajanje briga (separation of concerns).
+
+Poslovna logika (index.php): 
+Datoteka u kojoj se dohvaćaju podaci, komunicira s bazama 
+ili API-jevima, definiraju funkcije i vrši filtriranje.
+
+Pogled / Predložak (index.view.php): 
+Datoteka koja sadrži isključivo HTML i služi za prikaz podataka 
+(tzv. „glupi” template čija je jedina svrha ispisivanje i ponavljanje elemenata).
+
+Povezivanje datoteka (require): 
+Naredba require 'index.view.php'; na dnu logičke datoteke 
+učitava view i prosljeđuje joj definirane varijable.
+
+Izostavljanje zatvaranja PHP oznake (?>): 
+Datoteke koje sadrže isključivo PHP kod u pravilu 
+izostavljaju završnu oznaku ?>.
+
+Glavne prednosti: 
+Veća čitljivost, lakše održavanje i jasna granica između 
+onoga što aplikacija radi (logika) i onoga što korisnik vidi (dizajn i HTML).

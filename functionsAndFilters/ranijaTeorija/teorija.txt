@@ -1,0 +1,98 @@
+VARIABLES
+
+Miješanje PHP-a i HTML-a: 
+PHP oznake (<?php ... ?>) omogućuju pisanje PHP koda 
+izravno unutar HTML dokumenata.
+
+Spajanje (Konkatenacija) stringova: 
+U PHP-u se za spajanje tekstova koristi točka (.), 
+za razliku od plusa (+) u nekim drugim jezicima.
+
+Kreiranje varijabli: 
+Varijable se definiraju korištenjem znaka 
+dolar ($) i završavaju točkom-zarezom (;).
+
+Zašto su varijable važne: 
+Omogućuju rad s dinamičkim podacima (unosi korisnika, 
+baze podataka, obrada podataka) koji se ne mogu mijenjati statično.
+
+Refaktoriranje (Refactoring): 
+Poboljšavanje, čišćenje i prilagodba koda (npr. promjena načina ispisa) 
+bez mijenjanja krajnjeg rezultata koji korisnik vidi na stranici.
+
+Jednostruki vs. dvostruki navodnici:
+Dvostruki navodnici ("..."): Podržavaju ugnježđivanje i automatsko prepoznavanje varijabli unutar stringa.
+Jednostruki navodnici ('...'): Tretiraju sadržaj strogo kao doslovan tekst (literal) i ne čitaju varijable unutar sebe.
+
+//////////////////////////////////////////////
+
+CONDITIONALS AND BOOLEANS
+
+Boolean: 
+Podatkovni tip koji služi za označavanje stanja s dvije 
+vrijednosti – true (točno) ili false (netočno).
+
+Uvjetno grananje (if / else): 
+Služi za donošenje odluka i postavljanje „pitanja” u kodu. 
+Blok koda unutar if izvršava se samo ako je uvjet istinit, 
+dok se else koristi za alternativne slučajeve.
+
+Problem nedefiniranih varijabli: 
+Ako se varijabla (npr. $message) stvara unutar samo jednog 
+uvjeta (npr. samo u if bloku), a uvjet se ne ispuni, varijabla 
+nikada neće biti stvorena, što u PHP-u izaziva pogrešku. Svaki 
+scenarij mora imati definiranu varijablu.
+
+Kratki ispis (Short Echo Tags):
+ Sintaksa <?= $varijabla ?> predstavlja kraću zamjenu za 
+ <?php echo $varijabla; ?>. Točka-zarez na kraju opcionalna
+je ako se PHP oznaka odmah zatvara.
+
+////////////////////////////////////////////////
+
+ARRAYS
+
+Što su polja (Arrays): 
+Polja su strukture podataka koje služe za pohranu 
+kolekcije vrijednosti (popis knjiga, imena, brojeva) 
+unutar jedne varijable, a definiraju se uglatim zagradama ([]).
+
+Petlja foreach: 
+Koristi se za automatski prolazak kroz svaki pojedini element unutar polja.
+
+Izolacija varijabli (Siloing): 
+Ako se tekst nastavlja direktno na varijablu (npr. $bookTM), varijablu 
+je potrebno staviti u vitičaste zagrade ({$book}TM) kako bi PHP točno 
+prepoznao granicu imena varijable.
+
+Alternativna sintaksa za foreach: 
+Umjesto vitičastih zagrada ({}), koristi se dvotočka (:) i završetak 
+endforeach;, što znatno olakšava pisanje i čitavost koda kada se PHP 
+miješa sa složenim HTML-om.
+
+Kratki ispis (Short Echo Tags):
+Korištenje oznake <?= $book ?> unutar alternativne sintakse predstavlja
+najčišći i najčešći način dinamičkog prikazivanja podataka u HTML-u.
+
+//////////////////////////////////////
+
+ASSOCIATIVE ARRAYS
+
+Pristup elementima polja (indeksi): 
+Elementima unutar polja pristupa se pomoću uglatih 
+zagrada i pripadajućeg indeksa.
+
+Asocijativna polja (Key-Value parovi): 
+Kako bi se izbjegla nejasnoća oko toga što pojedina 
+vrijednost predstavlja (npr. čemu služi određeni URL), 
+u PHP-u koristimo asocijativna polja koja povezuju ključ 
+i vrijednost pomoću strelice (=>), npr. 'name' => 'Naziv knjige'.
+
+Petlje i asocijativna polja: 
+Kada se prolazi petljom kroz polje koje sadrži asocijativna
+polja, svaka pojedina stavka unutar petlje zapravo je cijelo 
+polje, a ne običan tekst (string).
+
+Dohvaćanje vrijednosti pomoću ključa: 
+Umjesto numeričkih indeksa, kod asocijativnih polja vrijednosti dohvaćamo 
+navođenjem samog imena ključa u uglatim zagradama (npr. $book['name']).
